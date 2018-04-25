@@ -30,5 +30,15 @@ namespace MarsRover.UnitTests
 
             Assert.AreEqual(Directions.North, rover.CurrentDirection);
         }
+
+        [Test]
+        public void receive_array_of_commands()
+        {
+            Command[] commandArray = new[] {Command.Forward, Command.Backward, Command.Left, Command.Right};
+
+            MarsRover rover = _fixture.Create<MarsRover>();
+            
+            Assert.DoesNotThrow(() => rover.AddCommands(commandArray));
+        }
     }
 }

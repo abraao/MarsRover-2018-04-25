@@ -20,5 +20,10 @@ namespace MarsRover
 
         public Position CurrentPosition => _position;
         public Directions CurrentDirection => _dir;
+
+        public void AddCommands(Command[] commandArray)
+        {
+            
+        }
     }
 }
